@@ -24,13 +24,13 @@ function createComponent {
   fi
 }
 
-if [[ ${1} != '-c' && ${1} != '-s'  || ${2} == ''  ]]; 
+if [[ ${1} != 'c' && ${1} != 's'  || ${2} == ''  ]]; 
   then  
     echo -e "\n${COLOR_ERROR}PARAMETROS INCORRECTOS\n";
     exit 1;
 fi
 
-if [[ ${1} == '-c' ]];
+if [[ ${1} == 'c' ]];
   then 
     dir=components;
     createComponent components ${2};
