@@ -5,12 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import styles from './index.module.scss';
 
-export default function MenuItem({ textItem, internalPath, externalPath, icon, onClick }) {
+export default function MenuItem({ textItem, internalPath, externalPath, icon, onClick, nameSocial}) {
   return (
     <li className={externalPath ? styles.itemMenuSocial : styles.itemMenuNav}>
       {externalPath ? (
-        <a target={icon && 'blank'} href={externalPath} className={styles.linkMenu}>
-          {icon && <FontAwesomeIcon className={styles.icon} icon={icon} />} {textItem}
+        <a target={icon && 'blank'} href={externalPath} className={`${styles.linkMenu} ${styles[nameSocial]}`}>
+          {icon && <FontAwesomeIcon className={styles.icon} icon={icon} />} {textItem !== '' && textItem}
         </a>
       ) : (
         <Link
@@ -30,6 +30,7 @@ MenuItem.propTypes = {
   externalPath: PropTypes.string,
   icon: PropTypes.string,
   internalPath: PropTypes.string,
+  nameSocial: PropTypes.string,
   textItem: PropTypes.string,
   onClick: PropTypes.func
 };

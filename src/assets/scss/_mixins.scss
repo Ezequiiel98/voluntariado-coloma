@@ -8,12 +8,13 @@
   align-items: center;
 }
 
-@mixin flex-center-center {
+@mixin flex-j-center-a-center {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 @mixin flex-j-end {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }

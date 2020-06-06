@@ -7,30 +7,20 @@
   top: 0;
   z-index: 5;
   margin: 0 auto;
-  border-bottom: 2px solid $green;
-  background-color: $white;
+  border-bottom: 2px solid $white;
+  background-color: $green;
 }
 
-
-.flex-end{
-  @include flex-j-end;
-}
-
-.flex-center{
-  @include flex-j-center;
-}
-
-.containerNav{ 
-  @include flex-center-center;
+.containerNav {
+  @include flex-j-center-a-center;
   padding: 0 20px;
   margin-bottom: 0;
   max-height: 40px;
-  border-bottom: 2px solid $green;
-  margin-top: 2px;
+  border-bottom: 2px solid $white;
 }
 
-@media screen and (min-width: 768px){
-  .containerNav{
+@media screen and (min-width: 768px) {
+  .containerNav {
     justify-content: flex-end;
   }
 }
@@ -44,8 +34,13 @@
   margin: 0 auto;
 }
 
-.containerMenuBurger{
- @extend .flex-end;
- min-width: 100%;
+.containerMenuBurger {
+  @include flex-j-end;
+  min-width: 100%;
 }
 
+.containerLenguages{
+  color: $white;
+  margin-left: 40px;
+  margin-right: 40px;
+}
