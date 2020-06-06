@@ -1,7 +1,6 @@
 @import '../../../../assets/scss/colors';
 @import '../../../../assets/scss/mixins';
 
-
 .containerNav {
   @include flex-j-center-a-center;
   padding: 0 20px;
@@ -16,13 +15,13 @@
   }
 }
 
-.containerLenguages{
+.containerLenguages {
   margin-left: 40px;
   margin-right: 40px;
 }
 
-.buttonLenguage{
-  background-color: transparent;
+.buttonLenguage {
+  background-color: $green;
   border: none;
   color: $white;
   font-size: 17px;
@@ -31,25 +30,23 @@
   -moz-transition: color .2s ease-in;
   -ms-transition: color .2s ease-in;
   -o-transition: color .2s ease-in;
-  
-  
-  &:nth-child(1){
+
+  &:nth-child(1) {
     border-right: 2px solid $white;
 
-    &:focus{
-          border-right: 2px solid $white;
-
+    &:focus {
+      border-right: 2px solid $white;
     }
   }
 
-  &:hover{
+  &:hover {
     cursor: pointer;
     color: #cacaca
   }
 
-  &:active, &:focus{
+  &:active,
+  &:focus {
     border: none;
     outline: none;
   }
-
 }

@@ -2,15 +2,13 @@
 
 
 .itemMenu {
-/*   padding: 12.8px 16px 8px 16px;
- */  
   padding: 12.8px 16px 8px 0;
 }
 
-@media screen and (min-width: 768px){
-  .itemMenu{
+@media screen and (min-width: 768px) {
+  .itemMenu {
     padding: 0;
-  };
+  }
 }
 
 .itemMenuNav {
@@ -24,7 +22,7 @@
     left: 48%;
     height: 3.2px;
     margin-top: 2px;
-    background-color: $white;
+    background-color: $green;
     transition: all .5s ease;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
@@ -35,6 +33,7 @@
   &:hover::after {
     width: 100%;
     left: 0;
+    background-color: $white;
   }
 }
 
@@ -54,14 +53,14 @@
   -o-transition: color .3s ease;
 }
 
-.twitter:hover{
+.twitter:hover {
   color: $twitter;
 }
 
-.instagram:hover{
+.instagram:hover {
   color: $instagram;
 }
 
-.facebook:hover{
+.facebook:hover {
   color: $facebook;
 }

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import styles from './index.module.scss';
 
-export default function MenuItem({ textItem, internalPath, externalPath, icon, onClick, nameSocial}) {
+export default function MenuItem({ textItem, internalPath, externalPath, icon, onClick, nameSocial }) {
   return (
     <li className={externalPath ? styles.itemMenuSocial : styles.itemMenuNav}>
       {externalPath ? (
@@ -28,7 +28,7 @@ export default function MenuItem({ textItem, internalPath, externalPath, icon, o
 
 MenuItem.propTypes = {
   externalPath: PropTypes.string,
-  icon: PropTypes.string,
+  icon: PropTypes.instanceOf(Object),
   internalPath: PropTypes.string,
   nameSocial: PropTypes.string,
   textItem: PropTypes.string,
