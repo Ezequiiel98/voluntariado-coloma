@@ -1,5 +1,4 @@
 @import '../../assets/scss/colors';
-@import '../../assets/scss/mixins';
 
 .nav {
   background-color: $white;
@@ -11,36 +10,3 @@
   background-color: $green;
 }
 
-.containerNav {
-  @include flex-j-center-a-center;
-  padding: 0 20px;
-  margin-bottom: 0;
-  max-height: 40px;
-  border-bottom: 2px solid $white;
-}
-
-@media screen and (min-width: 768px) {
-  .containerNav {
-    justify-content: flex-end;
-  }
-}
-
-.containerNavMenu {
-  @include flex-j-end;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  padding: 10px;
-  max-width: 1024px;
-  margin: 0 auto;
-}
-
-.containerMenuBurger {
-  @include flex-j-end;
-  min-width: 100%;
-}
-
-.containerLenguages{
-  color: $white;
-  margin-left: 40px;
-  margin-right: 40px;
-}

@@ -1,0 +1,15 @@
+@import '../../../../assets/scss/mixins';
+
+.containerNavMenu {
+  @include flex-j-end;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  padding: 10px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.containerMenuBurger {
+  @include flex-j-end;
+  min-width: 100%;
+}

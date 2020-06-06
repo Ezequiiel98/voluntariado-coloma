@@ -6,11 +6,7 @@ import Header from '../Header';
 import styles from './index.module.scss';
 
 function App() {
-  return (
-    <Header>
-      <NavBar />
-    </Header>
-  );
+  return <NavBar />;
 }
 
 export default App;

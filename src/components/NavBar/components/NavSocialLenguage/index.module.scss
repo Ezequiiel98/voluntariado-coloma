@@ -1,0 +1,55 @@
+@import '../../../../assets/scss/colors';
+@import '../../../../assets/scss/mixins';
+
+
+.containerNav {
+  @include flex-j-center-a-center;
+  padding: 0 20px;
+  margin-bottom: 0;
+  max-height: 40px;
+  border-bottom: 2px solid $white;
+}
+
+@media screen and (min-width: 768px) {
+  .containerNav {
+    justify-content: flex-end;
+  }
+}
+
+.containerLenguages{
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.buttonLenguage{
+  background-color: transparent;
+  border: none;
+  color: $white;
+  font-size: 17px;
+  transition: color .2s ease-in;
+  -webkit-transition: color .2s ease-in;
+  -moz-transition: color .2s ease-in;
+  -ms-transition: color .2s ease-in;
+  -o-transition: color .2s ease-in;
+  
+  
+  &:nth-child(1){
+    border-right: 2px solid $white;
+
+    &:focus{
+          border-right: 2px solid $white;
+
+    }
+  }
+
+  &:hover{
+    cursor: pointer;
+    color: #cacaca
+  }
+
+  &:active, &:focus{
+    border: none;
+    outline: none;
+  }
+
+}
