@@ -3,27 +3,36 @@ import PropTypes from 'prop-types';
 
 import styles from './index.module.scss';
 import MenuItem from './components/MenuItem';
-import { NAV_MENU } from './constants/menuItems';
+import { NAV_MENU, NAV_SOCIAL } from './constants/menuItems';
 
-export default function Menu({ column, windowWidth, minWidth, setShowMenu }) {
+export default function Menu({ windowWidth, minWidth, setShowMenu, socialNav }) {
+  const MENU_ITEMS = socialNav ? NAV_SOCIAL : NAV_MENU;
+
   const handleClick = () => {
     if (windowWidth < minWidth) {
       setShowMenu(false);
     }
   };
   return (
-    <ul className={column ? styles.menuColumn : styles.menu}>
-      {NAV_MENU.map(item => (
-        <MenuItem key={item.key} {...item} column={column} onClick={handleClick} />
+    <ul className={socialNav ? styles.menuSocial : styles.menu}>
+      {MENU_ITEMS.map(item => (
+        <MenuItem key={item.key} {...item} onClick={handleClick} />
       ))}
     </ul>
   );
 }
 
 Menu.propTypes = {
-  column: PropTypes.bool
+  minWidth: PropTypes.number,
+  setShowMenu: PropTypes.func,
+  socialNav: PropTypes.bool,
+  windowWidth: PropTypes.number
+
 };
 
 Menu.defaultProps = {
-  column: false
+  minWidth: 0,
+  setShowMenu: () => null,
+  socialNav: false,
+  windowWidth: 0
 };

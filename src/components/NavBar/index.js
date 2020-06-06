@@ -6,14 +6,14 @@ import styles from './index.module.scss';
 
 export default function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
-  const [innerWidth, setinnerWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const showHideMenu = () => {
       const minWidth = 768;
       const visibilityMenu = window.innerWidth >= minWidth;
       setShowMenu(visibilityMenu);
-      setinnerWidth(window.innerWidth);
+      setWindowWidth(window.innerWidth);
     };
 
     showHideMenu();
@@ -23,8 +23,18 @@ export default function NavBar() {
   return (
     <nav className={styles.nav}>
       <div className={styles.containerNav}>
-        <MenuBurger showMenu={showMenu} setShowMenu={setShowMenu} />
-        {showMenu && <Menu windowWidth={innerWidth} minWidth={768} setShowMenu={setShowMenu} />}
+        <Menu socialNav />
+        <div className={styles.containerLenguages}>
+          <span>EN |</span>
+          <span> ES</span>
+
+        </div>
+      </div>
+      <div className={styles.containerNavMenu}>
+        <div className={styles.containerMenuBurger}>
+          <MenuBurger showMenu={showMenu} setShowMenu={setShowMenu} />
+        </div>
+        {showMenu && <Menu windowWidth={windowWidth} minWidth={768} setShowMenu={setShowMenu} />}
       </div>
     </nav>
   );

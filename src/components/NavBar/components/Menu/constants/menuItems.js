@@ -1,10 +1,8 @@
-/* import {
+ import {
   faFacebookSquare,
   faInstagram,
-  faPinterestSquare,
   faTwitterSquare
 } from '@fortawesome/free-brands-svg-icons';
- */
 
 export const NAV_MENU = [
   {
@@ -31,5 +29,24 @@ export const NAV_MENU = [
     key: 4,
     textItem: 'Contacto',
     internalPath: '/contacto'
+  }
+];
+
+export const NAV_SOCIAL = [
+  {
+    key: 5,
+    icon: faTwitterSquare,
+    externalPath: 'https://twitter.com/'
+  },
+
+  {
+    key: 6,
+    icon: faInstagram,
+    externalPath: 'https://instagram.com'
+  },
+  {
+    key: 7,
+    icon: faFacebookSquare,
+    externalPath: 'https://facebook.com'
   }
 ];

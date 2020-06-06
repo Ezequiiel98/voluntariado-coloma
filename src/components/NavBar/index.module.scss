@@ -1,20 +1,51 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/mixins';
+
 .nav {
-  background-color: #fff;
+  background-color: $white;
   position: sticky;
   top: 0;
   z-index: 5;
   margin: 0 auto;
-  max-width: 1024px;
+  border-bottom: 2px solid $green;
+  background-color: $white;
 }
 
-.containerNav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+.flex-end{
+  @include flex-j-end;
+}
+
+.flex-center{
+  @include flex-j-center;
+}
+
+.containerNav{ 
+  @include flex-center-center;
+  padding: 0 20px;
+  margin-bottom: 0;
+  max-height: 40px;
+  border-bottom: 2px solid $green;
+  margin-top: 2px;
+}
+
+@media screen and (min-width: 768px){
+  .containerNav{
+    justify-content: flex-end;
+  }
+}
+
+.containerNavMenu {
+  @include flex-j-end;
+  align-content: flex-start;
   flex-wrap: wrap;
-  margin: 0 auto;
   padding: 10px;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
-
+.containerMenuBurger{
+ @extend .flex-end;
+ min-width: 100%;
+}
 

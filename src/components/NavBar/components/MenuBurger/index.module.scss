@@ -1,11 +1,9 @@
 .burgerMenu {
-  justify-self: flex-end;
   font-size: 32px;
   position: relative;
-  width: 45px;
-  height: 40px;
-  min-width: 100%;
-  
+  width: 35px;
+  height: 30px;
+
   &:hover {
     cursor: pointer;
   }
@@ -16,8 +14,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 5px;
-  width: 45px;
+  height: 3px;
+  width: 35px;
   background-color: black;
   transition: transform .5s ease;
   -webkit-transition: transform .5s ease;
@@ -26,11 +24,11 @@
   -o-transition: transform .5s ease;
 
   &:nth-child(2) {
-    top: 14px;
+    top: 10px;
   }
 
   &:nth-child(3) {
-    top: 28px;
+    top: 20px;
   }
 }
 
@@ -39,19 +37,19 @@
   margin-top: 8px;
 
   &:nth-child(1) {
-    transform: rotate(45deg) translateY(.2rem);
-    -webkit-transform: rotate(45deg) translateY(.2rem);
-    -moz-transform: rotate(45deg) translateY(.2rem);
-    -ms-transform: rotate(45deg) translateY(.2rem);
-    -o-transform: rotate(45deg) translateY(.2rem);
+    transform: rotate(43deg) translateY(1.6px);
+    -webkit-transform: rotate(43deg) translateY(1.6px);
+    -moz-transform: rotate(43deg) translateY(1.6px);
+    -ms-transform: rotate(43deg) translateY(1.6px);
+    -o-transform: rotate(43deg) translateY(1.6px);
   }
 
   &:nth-child(2) {
-    transform: rotate(-45deg) translateY(-.6rem) translateX(.4rem);
-    -webkit-transform: rotate(-45deg) translateY(-.6rem) translateX(.4rem);
-    -moz-transform: rotate(-45deg) translateY(-.6rem) translateX(.4rem);
-    -ms-transform: rotate(-45deg) translateY(-.6rem) translateX(.4rem);
-    -o-transform: rotate(-45deg) translateY(-.6rem) translateX(.4rem);
+    transform: rotate(-43deg) translateY(-8px) translateX(4.8px);
+    -webkit-transform: rotate(-43deg) translateY(-8px) translateX(4.8px);
+    -moz-transform: rotate(-43deg) translateY(-8px) translateX(4.8px);
+    -ms-transform: rotate(-43deg) translateY(-8px) translateX(4.8px);
+    -o-transform: rotate(-43deg) translateY(-8px) translateX(4.8px);
   }
 
   &:nth-child(3) {
