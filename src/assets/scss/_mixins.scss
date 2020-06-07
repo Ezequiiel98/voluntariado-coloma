@@ -1,10 +1,18 @@
-
-@mixin flex-j-center($direction:  null) {
+@mixin flex-j-center($direction: null) {
   display: flex;
   justify-content: center;
 
-  @if $direction == 'column' {
+  @if $direction=='column' {
     flex-direction: column;
+  }
+}
+
+@mixin flex-j-end($direction: null) {
+  display: flex;
+  justify-content: flex-end;
+
+  @if $direction != '' and $direction != null {
+    flex-direction: #{$direction};
   }
 }
 
@@ -12,27 +20,53 @@
   display: flex;
   align-items: center;
 
-  @if $direction == 'column' {
+  @if $direction=='column' {
     flex-direction: column;
   }
 }
 
-@mixin flex-j-center-a-center($direction:  nul) {
+@mixin flex-a-end($direction: null) {
+  display: flex;
+  align-items: center;
+
+  @if $direction=='column' {
+    flex-direction: column;
+  }
+}
+
+@mixin flex-j-center-a-center($direction: null) {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @if $direction == 'column' {
+  @if $direction=='column' {
     flex-direction: column;
   }
-
 }
 
-@mixin flex-j-end($direction:  nul) {
-  display: flex;
-  justify-content: flex-end;
 
-  @if $direction == 'column' {
-    flex-direction: column;
+@mixin flex($direction: null, $justify-content: null, $align-content: null, $justify-items: null, $align-items: null) {
+  
+  display: flex;
+  
+  @if ($direction != '' and $direction != null ){
+    flex-direction: #{$direction};
   }
+
+  @if ($justify-content != '' and $justify-content != null ){
+    justify-content: #{$justify-content};
+  }
+
+  @if ($align-content == '' and $align-content == null ) {
+    align-content: #{$align-content};
+  }
+
+  @if ($justify-items != '' and $justify-items != null ){
+    justify-items:  #{$justify-items};
+  }
+
+  @if ($align-items != '' and $align-items != null ) {
+    align-items: #{$align-items};
+  }
+
 }

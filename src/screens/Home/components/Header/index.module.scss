@@ -1,3 +1,6 @@
+@import '../../../../assets/scss/colors';
+@import '../../../../assets/scss/mixins';
+
 .header {
   height: 81vh;
   max-height: 81vh;
@@ -12,28 +15,22 @@
 }
 
 .container {
-  color: white;
+  color: $white;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.733);
   min-width: 100%;
   min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  @include flex('column', 'flex-end', null,  null,  'center');
 }
 
 .containerTitle{
+  @include flex('column', 'center');
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .title {
   margin: 0 auto;
   font-size: 65px;
-
 }
 
 .subtitle {
@@ -54,7 +51,7 @@
 .icon {
   display: block;
   font-size: 35px;
-  color: white;
+  color: $white;
 }
 
 .icon1{
