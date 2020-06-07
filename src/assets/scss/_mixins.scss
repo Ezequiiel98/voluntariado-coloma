@@ -1,20 +1,38 @@
-@mixin flex-j-center {
+
+@mixin flex-j-center($direction:  null) {
   display: flex;
   justify-content: center;
+
+  @if $direction == 'column' {
+    flex-direction: column;
+  }
 }
 
-@mixin flex-a-center {
+@mixin flex-a-center($direction: null) {
   display: flex;
   align-items: center;
+
+  @if $direction == 'column' {
+    flex-direction: column;
+  }
 }
 
-@mixin flex-j-center-a-center {
+@mixin flex-j-center-a-center($direction:  nul) {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @if $direction == 'column' {
+    flex-direction: column;
+  }
+
 }
 
-@mixin flex-j-end {
+@mixin flex-j-end($direction:  nul) {
   display: flex;
   justify-content: flex-end;
+
+  @if $direction == 'column' {
+    flex-direction: column;
+  }
 }

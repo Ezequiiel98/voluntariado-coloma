@@ -22,7 +22,6 @@ html {
 }
 
 a {
-  color: $green;
   text-decoration: none;
 }
 
@@ -30,4 +29,14 @@ li{
   list-style: none;
 }
 
+h1{
+  font-size: 55px;
+}
 
+h2{
+  font-size: 38px;
+}
+
+h1,h2{
+  font-family: 'Amatic SC', cursive;;
+}
