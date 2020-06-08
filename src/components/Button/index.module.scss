@@ -12,7 +12,6 @@
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
   background-color: $white;
-  color: $green;
   font-weight: bold;
   font-size: 14px;
   transition: color .5s ease, background-color .5s ease;
@@ -20,11 +19,15 @@
   -moz-transition: color .5s ease, background-color .5s ease;
   -ms-transition: color .5s ease, background-color .5s ease;
   -o-transition: color .5s ease, background-color .5s ease;
+  background-color: $green;
+  color: $white;
+  touch-action: none;
 
   &:hover {
     cursor: pointer;
-    background-color: $green;
-    color: $white;
+    background-color: #cdfdb4;
+    color:  $green;
   }
+
 }
 /* $yellow: #fef67f, $green: #aedd94, orange: #ff8351, lightblue:  #91E4FB */
