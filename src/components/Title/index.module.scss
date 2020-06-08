@@ -5,3 +5,24 @@
 .red{
   color: red
 }
+/* $yellow: #fef67f, $green: #aedd94, orange: #ff8351, lightblue:  #91E4FB */
+$yellow: #fef67f;
+$orange: #ff8351;
+$green: #aedd94;
+$lightblue:  #91E4FB;
+
+.green{
+  background-color: $green;
+}
+
+.orange{
+  background-color: $orange;
+}
+
+.yellow{
+  background-color: $yellow;
+}
+
+.lightblue{
+  background-color: $lightblue;
+}

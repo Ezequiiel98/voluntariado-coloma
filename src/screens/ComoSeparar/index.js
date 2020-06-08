@@ -1,8 +1,16 @@
 import React from 'react';
-import Title from '../../components/Title';
 
+
+import Header from './components/Header';
+import WasteType from './components/WasteType';
+import { WASTE_TYPES } from './constants/wasteTypes';
 import styles from './index.module.scss';
 
 export default function ComoSeparar() {
-      return <Title Tag="h1" text="¿CÓMO SEPARAR TUS RESIDUOS?" center />;
+ return (
+   <section className={styles.comoSeparar}>
+     <Header />
+     { WASTE_TYPES.map(type => <WasteType key={type.id} {...type} />) }
+   </section>
+ );
 }

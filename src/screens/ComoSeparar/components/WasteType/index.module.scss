@@ -1,0 +1,29 @@
+.wasteType {
+  padding: 20px 25px;
+}
+
+@media screen and  (min-width:768px){
+  .wasteType {
+    padding: 20px 70px;
+  }
+}
+
+.title{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.subtitle{
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.paragraph{
+  font-family: 'Amatic SC', cursive;
+  font-size: 35px;
+}
