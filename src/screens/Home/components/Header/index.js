@@ -11,8 +11,8 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.containerTitle}>
-          <Title Tag="h1" className={styles.title} text="ECOcientes" />
-          <Title Tag="h2" className={styles.subtitle} text="PROYECTO DE CONSIENTIZACIÓN" />
+          <Title Tag="h1" className={styles.title} text="ECOnscientes" />
+          <Title Tag="h2" className={styles.subtitle} text="PROYECTO DE CONSIENTIZACIÓN AMBIENTAL" />
         </div>
         <a href="#main" className={styles.buttonArrow}>
           <FontAwesomeIcon icon={faChevronDown} className={styles.icon1} />
