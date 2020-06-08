@@ -2,8 +2,8 @@
 @import '../../../../assets/scss/mixins';
 
 .header {
-  height: 81vh;
-  max-height: 81vh;
+  height: 78vh;
+  max-height: 78vh;
   width: 100%;
   max-width: 100%;
   overflow: hidden;
@@ -13,16 +13,23 @@
   background-size: cover;
 }
 
+@media screen and (min-width: 480px) {
+  .header {
+    height: 82vh;
+    max-height: 82vh;
+  }
+}
+
 .container {
   color: $white;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.733);
   min-width: 100%;
   min-height: 100%;
-  @include flex('column', 'flex-end', null,  null,  'center');
+  @include flex('column', 'flex-end', null, null, 'center');
 }
 
-.containerTitle{
+.containerTitle {
   @include flex('column', 'center');
   flex: 1;
 }
@@ -43,7 +50,7 @@
   margin: 0 auto;
 }
 
-.buttonArrow{
+.buttonArrow {
   max-height: 85px;
 }
 
@@ -53,63 +60,63 @@
   color: $white;
 }
 
-.icon1{
+.icon1 {
   @extend .icon;
   animation-name: arrowOpacity;
   animation-duration: 1.2s;
   animation-iteration-count: infinite;
 }
 
-.icon2{
+.icon2 {
   @extend .icon;
   animation-name: arrowOpacity;
   animation-duration: 1.2s;
   animation-iteration-count: infinite;
   animation-delay: .3s;
-  transform: translateY(-12px) ;
-  -webkit-transform: translateY(-12px) ;
-  -moz-transform: translateY(-12px) ;
-  -ms-transform: translateY(-12px) ;
-  -o-transform: translateY(-12px) ;
+  transform: translateY(-12px);
+  -webkit-transform: translateY(-12px);
+  -moz-transform: translateY(-12px);
+  -ms-transform: translateY(-12px);
+  -o-transform: translateY(-12px);
 }
 
-.icon3{
+.icon3 {
   @extend .icon;
   animation-name: arrowOpacity;
   animation-duration: 1.2s;
   animation-iteration-count: infinite;
   animation-delay: .6s;
-  transform: translateY(-24px) ;
-  -webkit-transform: translateY(-24px) ;
-  -moz-transform: translateY(-24px) ;
-  -ms-transform: translateY(-24px) ;
-  -o-transform: translateY(-24px) ;
+  transform: translateY(-24px);
+  -webkit-transform: translateY(-24px);
+  -moz-transform: translateY(-24px);
+  -ms-transform: translateY(-24px);
+  -o-transform: translateY(-24px);
 }
 
-@keyframes arrowOpacity{
-  0%{
+@keyframes arrowOpacity {
+  0% {
     opacity: 1;
   }
 
-  50%{
+  50% {
     opacity: 0.6;
   }
 
-  100%{
+  100% {
     opacity: 0.3;
   }
 }
 
-@-webkit-keyframes arrowOpacity{
-  0%{
+@-webkit-keyframes arrowOpacity {
+  0% {
     opacity: 1;
   }
 
-  50%{
+  50% {
     opacity: 0.6;
   }
 
-  100%{
+  100% {
     opacity: 0.3;
   }
 }

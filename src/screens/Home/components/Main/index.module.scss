@@ -1,0 +1,36 @@
+@import '../../../../assets/scss/colors';
+@import '../../../../assets/scss/mixins';
+
+.main {
+  margin-top: 0;
+  padding: 20px;
+}
+
+.container {
+  @include flex(null, 'center');
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.description {
+  margin-top: 10px;
+  flex: 1;
+  min-width: 100%;
+  line-height: 26px;
+}
+
+@media screen and (min-width: 330px) {
+  .container {
+    @include flex(null, 'space-between');
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 70%;
+  }
+
+  .description {
+    padding: 0 70px;
+  }
+}
