@@ -16,8 +16,8 @@ export const WASTE_TYPES = [
     id: 2,
     title: 'RESIDUOS MIXTOS',
     backgroundColor: 'orange',
-    paragraph: 'Elementos sucios como: pañales, toallas femeninas y algodones, pintura, venenos, envases de insecticidas, materia fecal de perros y gatos, boteelas de aceite, bolsitas de tartas o masitas, sachets, elementos cortantes, bolsitas metalizadas (papas fritas), papel film, restos de medicamentos, colillas de cigarrillos, huesos, pelos.',
+    paragraph: 'Elementos sucios como: pañales, toallas femeninas y algodones, pintura, venenos, envases de insecticidas, materia fecal de perros y gatos, boteelas de aceite, bolsitas de tartas o masitas, sachets, elementos cortantes, bolsitas metalizadas (papas fritas), papel film, restos de medicamentos, colillas de cigarrillos, huesos, pelos. ',
     bold: 'Si estan sucios:',
-    afterBoldText: 'papeles, cartones, plasticos,metales y vidrios rotos.'
+    afterBoldText: ' papeles, cartones, plasticos,metales y vidrios rotos.'
   }
 ];

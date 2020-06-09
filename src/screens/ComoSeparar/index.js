@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Title from '../../components/Title';
 
 import Header from './components/Header';
 import WasteType from './components/WasteType';
@@ -11,6 +12,8 @@ export default function ComoSeparar() {
    <section className={styles.comoSeparar}>
      <Header />
      { WASTE_TYPES.map(type => <WasteType key={type.id} {...type} />) }
+
+    <Title Tag="h2" text="¿QUÉ DÍA RECOLECTAN CADA RESIDUO?" />
    </section>
  );
 }

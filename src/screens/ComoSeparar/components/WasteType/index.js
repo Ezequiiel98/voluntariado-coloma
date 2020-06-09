@@ -8,9 +8,13 @@ import styles from './index.module.scss';
 export default function WasteType({ title, subtitle, backgroundColor, paragraph, bold, afterBoldText }) {
   return (
     <article className={styles.wasteType}>
-      <Title Tag="h2" center text={title} className={styles.title} backgroundColor={backgroundColor} />
+      <Title Tag="h3" center text={title} className={styles.title} backgroundColor={backgroundColor} />
       {subtitle && <Title Tag="h5" center text={subtitle} className={styles.subtitle} backgroundColor={backgroundColor} />}
-      <p className={styles.paragraph}> {paragraph} {bold && <b>{bold}</b>} {afterBoldText && afterBoldText} </p>
+      <p className={styles.paragraph}>
+        {paragraph}
+        {bold && <b className={styles.bold}>{bold}</b>}
+        {afterBoldText && afterBoldText}
+      </p>
     </article>
   );
 }

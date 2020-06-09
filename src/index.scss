@@ -18,7 +18,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -26,18 +28,27 @@ a {
   text-decoration: none;
 }
 
-li{
+li {
   list-style: none;
 }
 
-h1{
+h1 {
   font-size: 55px;
 }
 
-h2{
-  font-size: 38px;
+h2 {
+  font-size: 45px;
 }
 
-h1,h2,h3,h4,h5{
-  font-family: 'Amatic SC', cursive;;
+h3 {
+  font-size: 35px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Amatic SC', cursive;
+  ;
 }
