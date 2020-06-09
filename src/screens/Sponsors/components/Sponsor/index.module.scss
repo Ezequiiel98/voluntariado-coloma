@@ -1,14 +1,13 @@
 .sponsor{
   min-width: 100%;
   padding: 35px;
-  padding-top: 0;
   overflow: hidden;
   align-self: center;
 }
 
 @media screen and (min-width: 480px){
   .sponsor{
-    min-width: 30%;
+    min-width: 27%;
     max-width: 200px;
   }
 }
