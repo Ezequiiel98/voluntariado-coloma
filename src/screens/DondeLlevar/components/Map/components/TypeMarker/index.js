@@ -24,6 +24,6 @@ export default function TypeMarker ({ type, color, position }) {
 
 TypeMarker.propTypes = {
   type: PropTypes.string.isRequired,
-  color: PropTypes.oneOf(['red', 'lightblue', 'green']),
+  color: PropTypes.oneOf(['red', 'lightblue', 'green']).isRequired,
   position: PropTypes.oneOf(['topleft', 'topright', 'bottomleft', 'bottomright'])
 };
