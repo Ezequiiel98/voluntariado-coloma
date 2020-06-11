@@ -8,33 +8,36 @@ import { faMapMarkerAlt } from '@fortawesome/fontawesome-free-solid';
 
 import styles from './index.module.scss';
 import Search from './components/Search';
-import TypeMarket from './components/TypeMarket';
+import TypeMarker from './components/TypeMarker';
+import { MARKERS } from './constants/markers';
 
 export default function Map() {
-  const position = [-34.6256097, -58.3808893, 21];
-  const position2 = [-34, -58.3808893, 21];
+  const { latitud } = MARKERS[0];
+  const { longitud } = MARKERS[0];
+  const position = [latitud, longitud];
 
   const markerIcon = (color = 'markerIcon') => L.divIcon({
       html: ReactDOMServer.renderToString(<FontAwesomeIcon icon={faMapMarkerAlt} className={styles[color]} />),
       iconSize: [41, 113],
       className: 'markerIcon'
-   });
+  });
 
-  return (<div className={styles.map}>
-    <MapContainer className={styles.map} center={position} zoom={11} scrollWheelZoom={false}>
-      <TileLayer
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+  return (
+    <div className={styles.map}>
+      <MapContainer className={styles.map} center={position} zoom={12} scrollWheelZoom={false}>
+        <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      />
-      <Search markerIcon={markerIcon('red')} />
+        />
+        <Search markerIcon={markerIcon('red')} />
 
-      <TypeMarket type="Tu ubicación" color="red" position="topright" />
-      <TypeMarket type="Puntos verdes" color="green" position="topleft" />
-      <TypeMarket type="Planta de reciclaje" color="lightblue" position="topleft" />
+        <TypeMarker type="Tu ubicación" color="red" position="topright" />
+        <TypeMarker type="Puntos verdes" color="green" position="topleft" />
+        <TypeMarker type="Planta de reciclaje" color="lightblue" position="topleft" />
 
-      <Marker position={position2} icon={markerIcon('green')} />
-      <Marker position={position} icon={markerIcon('lightblue')} />
-    </MapContainer>
-  </div>
+        {MARKERS.map(marker => <Marker key={marker.id} position={[marker.latitud, marker.longitud]} icon={markerIcon(marker.color)} />)}
+
+      </MapContainer>
+    </div>
   );
 }
