@@ -1,0 +1,24 @@
+.map{
+  min-height: 80vh;
+  min-width: 80vw;
+  z-index: 2;
+}
+
+.markerIcon{
+  font-size: 35px;
+}
+
+.green{
+  @extend .markerIcon;
+  color:#5CB85C  ;
+}
+
+.lightblue{
+  @extend .markerIcon;
+  color:rgb(5, 134, 173);
+}
+
+.red{
+  @extend .markerIcon;
+  color: #ec3a3a;
+}
