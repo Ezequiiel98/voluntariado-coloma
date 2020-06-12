@@ -1,4 +1,4 @@
-@import '../../assets/scss/colors';
+@import '../../../../assets/scss/colors';
 
 .button {
   padding: 10px 20px;
@@ -19,15 +19,27 @@
   -moz-transition: color .5s ease, background-color .5s ease;
   -ms-transition: color .5s ease, background-color .5s ease;
   -o-transition: color .5s ease, background-color .5s ease;
-  background-color: $green;
-  color: $white;
   touch-action: none;
 
   &:hover {
     cursor: pointer;
-    background-color: #cdfdb4;
-    color:  $green;
+    background-color: $green;
+    color: $white;
   }
-
 }
+
+.link {
+  color: $green;
+  transition: color .5s ease, ;
+  -webkit-transition: color .5s ease, ;
+  -moz-transition: color .5s ease, ;
+  -ms-transition: color .5s ease, ;
+  -o-transition: color .5s ease, ;
+
+  &:hover {
+    cursor: pointer;
+    color: $white;
+  }
+}
+
 /* $yellow: #fef67f, $green: #aedd94, orange: #ff8351, lightblue:  #91E4FB */
