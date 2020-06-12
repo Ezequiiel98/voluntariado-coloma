@@ -1,0 +1,11 @@
+@import '../../assets/scss/mixins';
+
+.title{
+ margin: 15px auto ;
+}
+
+.sponsors{
+  @include flex(null, 'space-around');
+  flex-wrap: wrap;
+  padding: 0 40px;
+}

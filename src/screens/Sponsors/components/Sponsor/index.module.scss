@@ -1,0 +1,25 @@
+.sponsor{
+  min-width: 100%;
+  padding: 10px 20px;
+  overflow: hidden;
+  align-self: center;
+}
+
+@media screen and (min-width: 480px){
+  .sponsor{
+    min-width: 27%;
+    max-width: 250px;
+    padding: 35px;
+  }
+}
+
+.logo > img{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.name{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: lighter;
+}

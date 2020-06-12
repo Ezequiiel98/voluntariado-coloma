@@ -8,7 +8,7 @@ export const NAV_MENU = [
   {
     key: 0,
     textItem: 'Inicio',
-    internalPath: '/Inicio'
+    internalPath: '/'
   },
   {
     key: 1,
