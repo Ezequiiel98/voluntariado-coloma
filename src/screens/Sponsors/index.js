@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Title from '../../components/Title';
+import Title from 'components/Title';
 
 import { SPONSORS } from './constants/sponsors';
 import Sponsor from './components/Sponsor';
