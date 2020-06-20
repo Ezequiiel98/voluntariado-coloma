@@ -24,8 +24,13 @@
   &:hover {
     cursor: pointer;
     background-color: $green;
+  }
+  
+  &:hover .link {
+    cursor: pointer;
     color: $white;
   }
+
 }
 
 .link {
@@ -35,11 +40,6 @@
   -moz-transition: color .5s ease, ;
   -ms-transition: color .5s ease, ;
   -o-transition: color .5s ease, ;
-
-  &:hover {
-    cursor: pointer;
-    color: $white;
-  }
 }
 
 /* $yellow: #fef67f, $green: #aedd94, orange: #ff8351, lightblue:  #91E4FB */
