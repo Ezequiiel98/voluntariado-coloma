@@ -1,4 +1,4 @@
-.loader{ 
+#loader{ 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,7 +7,9 @@
 
 }
 
-.dot {
+.dot1,
+.dot2,
+.dot3{
   background-color: #d3d3d3;
   width: 40px;
   height: 40px;
@@ -18,18 +20,12 @@
   animation-iteration-count: infinite;
 }
 
-.dot1 { 
-  @extend .dot;
-}
-
 .dot2{
-  @extend .dot;
   margin-left: 15px;
   animation-delay: .4s;
 }
 
 .dot3{
-  @extend .dot;
   margin-left: 15px;
   animation-delay: .8s;
 }
@@ -45,32 +41,4 @@
    opacity: 0.3;
  }
 
-}
-
-.letters{
-  font-size: 40px;
-  color: green;
-  animation-name: letterLoading;
-  animation-iteration-count: infinite;
-  animation-duration: 2.2s;
-}
-
-
-$letters: 11;
-$delay: 0;
-
-@for $i from 1 through $letters {
-  .letters:nth-child(#{$i}) {
-    animation-delay: #{$delay}s;
-  }
-  $delay: $delay + .2;
-}
-
-@keyframes letterLoading{
-  from{
-   opacity: 1;
-  }
-  to{
-   opacity: 0;
-  }
 }

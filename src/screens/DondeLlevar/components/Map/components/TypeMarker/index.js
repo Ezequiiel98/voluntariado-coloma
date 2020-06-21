@@ -18,7 +18,8 @@ export default function TypeMarker ({ type, color, position }) {
     };
 
     typeMarker.addTo(map);
-  });
+  }, []);
+
   return null;
 }
 
