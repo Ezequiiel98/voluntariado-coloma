@@ -1,21 +1,25 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Route, Switch, Redirect } from 'react-router';
 
-import ComoSeparar from '../../screens/ComoSeparar';
-import DondeLlevar from '../../screens/DondeLlevar';
-import Sponsors from '../../screens/Sponsors';
-import Home from '../../screens/Home';
+import Home from 'screens/Home';
+const ComoSeparar = lazy(() => import('screens/ComoSeparar'));
+const DondeLlevar = lazy(() => import('screens/DondeLlevar'));
+const Sponsors = lazy(() => import('screens/Sponsors'));
+const Contacto = lazy(() => import('screens/Contacto'));
 
 export default function Main() {
   return (
     <main>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/como-separar" component={ComoSeparar} />
-        <Route exact path="/donde-llevar" component={DondeLlevar} />
-        <Route exact path="/sponsors" component={Sponsors} />
-        <Route path="/" render={()=><Redirect to="/" />} />
-      </Switch>
+      <Suspense fallback={<div>Cargando...</div>}>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/como-separar" component={ComoSeparar} />
+          <Route exact path="/donde-llevar" component={DondeLlevar} />
+          <Route exact path="/sponsors" component={Sponsors} />
+          <Route exact path="/contacto" component={Contacto} />
+          <Route path="/" render={()=><Redirect to="/" />} />
+        </Switch>
+      </Suspense>
     </main>
   );
 }
