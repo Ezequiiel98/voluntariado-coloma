@@ -1,21 +1,11 @@
 import React, { Suspense, lazy } from 'react';
 import { Route, Switch, Redirect } from 'react-router';
 
-import Home from '../../screens/Home';
-
-/*
-  import ComoSeparar from '../../screens/ComoSeparar';
-   import DondeLlevar from '../../screens/DondeLlevar';
-  import Sponsors from '../../screens/Sponsors';
-  import Contacto from '../../screens/Contacto';
-
-const Home = lazy(() => import('../../screens/Home'));
-*/
-
-const ComoSeparar = lazy(() => import('../../screens/ComoSeparar'));
-const DondeLlevar = lazy(() => import('../../screens/DondeLlevar'));
-const Sponsors = lazy(() => import('../../screens/Sponsors'));
-const Contacto = lazy(() => import('../../screens/Contacto'));
+import Home from 'screens/Home';
+const ComoSeparar = lazy(() => import('screens/ComoSeparar'));
+const DondeLlevar = lazy(() => import('screens/DondeLlevar'));
+const Sponsors = lazy(() => import('screens/Sponsors'));
+const Contacto = lazy(() => import('screens/Contacto'));
 
 export default function Main() {
   return (
@@ -31,5 +21,5 @@ export default function Main() {
         </Switch>
       </Suspense>
     </main>
-);
+  );
 }
