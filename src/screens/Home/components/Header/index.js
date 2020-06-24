@@ -1,9 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/fontawesome-free-solid';
+import Title from 'components/Title';
 
-import Title from '../../../../components/Title';
-
+import logo from './logo.jpeg';
 import styles from './index.module.scss';
 
 export default function Header() {
@@ -11,7 +11,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.containerTitle}>
-          <Title Tag="h1" className={styles.title} text="ECOnscientes" />
+          <div className={styles.containerImg} ><img className={styles.logoImg} src={logo} alt="Logo de Econsientes" /></div>
           <Title Tag="h2" className={styles.subtitle} text="PROYECTO DE CONSIENTIZACIÓN AMBIENTAL" />
         </div>
         <a href="#main" className={styles.buttonArrow}>

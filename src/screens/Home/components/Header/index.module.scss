@@ -39,6 +39,16 @@
   font-size: 65px;
 }
 
+.containerImg{
+ max-width: 500px;
+ max-height: 200px;
+ object-fit: cover;
+}
+
+.logoImg{
+ max-width: 100%;
+}
+
 .subtitle {
   font-weight: 700;
   font-size: 42px;
