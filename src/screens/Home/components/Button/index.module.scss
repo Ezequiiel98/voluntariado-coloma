@@ -1,8 +1,10 @@
 @import '../../../../assets/scss/colors';
 
 .button {
+  padding: 10px;
   padding: 10px 20px;
-  max-width: 150px;
+  max-width: 120px;
+  min-width: 120px;
   min-height: 50px;
   margin-top: 20px;
   border: 3px solid $green;
@@ -20,7 +22,7 @@
   -ms-transition: color .5s ease, background-color .5s ease;
   -o-transition: color .5s ease, background-color .5s ease;
   touch-action: none;
-
+  
   &:hover {
     cursor: pointer;
     background-color: $green;
@@ -31,6 +33,14 @@
     color: $white;
   }
 
+}
+
+@media screen and (min-width: 350px){
+  .button{
+    padding: 10px 20px;
+    max-width: 150px;
+    min-width: 150px;
+  }
 }
 
 .link {

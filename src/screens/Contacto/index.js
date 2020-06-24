@@ -9,7 +9,7 @@ import styles from './index.module.scss';
 export default function Contacto() {
   return (<>
     <Title Tag="h1" text="¡CONTACTANOS!" center />
-    <Title Tag="h3" text="¡Hola! Si deseas contactarte déjanos un mensaje aquí o en nuestras redes sociales." className={styles.subtitle} />
+    <Title Tag="h3" text="¡Hola! Si deseas contactarte déjanos un mensaje aquí o en nuestras redes sociales." center className={styles.subtitle} />
     <div className={styles.container}>
       <ContactForm />
       <SocialNetworks />

@@ -17,9 +17,13 @@
 
 .containerLenguages {
   margin-left: 40px;
-  margin-right: 40px;
 }
 
+@media screen and (min-width: 480px){
+  .containerLenguages{
+    margin-right: 40px;
+  }
+}
 .buttonLenguage {
   background-color: $green;
   border: none;
