@@ -12,6 +12,8 @@
 @media screen and (min-width: 480px) {
   .newsletter {
     padding: 35px;
+    padding-top: 10px;
+    margin-top: 25px;
   }
 
   .containerForm {
@@ -19,19 +21,15 @@
   }
 }
 
-.place {
-  font-weight: bold;
-}
-
 .input {
-  border: 1px solid rgb(124, 124, 124);
+  border: 1px solid $gray;
   padding: 18px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   outline: none;
-
+  
   &:focus {
-    border-color: #1A73E8;
+    border-color: $focusInputColor;
   }
 }
 
@@ -45,7 +43,7 @@
 }
 
 .button {
-  border: 1px solid rgb(124, 124, 124);
+  border: 1px solid $gray;
   border-left: none;
   background-color: $white;
   font-family: 'Amatic SC', cursive;
@@ -64,15 +62,10 @@
   &:focus {
     outline: none;
   }
-
-  transition: color .4s ease-in,
-  background-color .4s ease-out;
-  -webkit-transition: color .4s ease-in,
-  background-color .4s ease-out;
-  -moz-transition: color .4s ease-in,
-  background-color .4s ease-out;
-  -ms-transition: color .4s ease-in,
-  background-color .4s ease-out;
-  -o-transition: color .4s ease-in,
-  background-color .4s ease-out;
+  
+  transition: color .4s ease-in, background-color .4s ease-out;
+  -webkit-transition: color .4s ease-in, background-color .4s ease-out;
+  -moz-transition: color .4s ease-in, background-color .4s ease-out;
+  -ms-transition: color .4s ease-in, background-color .4s ease-out;
+  -o-transition: color .4s ease-in, background-color .4s ease-out;
 }

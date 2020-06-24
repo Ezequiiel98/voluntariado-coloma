@@ -1,0 +1,78 @@
+@import '../../../../assets/scss/colors.scss';
+@import '../../../../assets/scss/mixins.scss';
+
+.containerSocialNet{
+  min-width: 100%;
+  padding: 10px 0;
+ 
+  *+.socialNet { 
+    margin-top: 25px;
+  } 
+}
+
+@media screen and (min-width: 480px){
+  .containerSocialNet{
+    min-width: 35%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .containerSocialNet{
+    margin-left: 50px;
+    padding-left: 100px;
+  }
+}
+
+.socialNet{
+  @include flex-a-center;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.containerIcon{
+  @include flex-j-center-a-center;
+  flex-shrink: 0;
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+  
+  &:hover .icon{
+    transform: rotateZ(360deg); 
+  }
+}
+
+.gmail{
+  @extend .containerIcon;
+  background-color: $gmail;
+}
+
+.facebook{
+ @extend .containerIcon;
+ background-color: $facebook;
+}
+
+.instagram{
+  @extend .containerIcon; 
+  background-color: $instagram;
+}
+
+.twitter{
+  @extend .containerIcon;
+   background-color: $twitter;
+}
+
+.icon {
+  color: $white;
+  font-size: 35px;
+  transition: transform .5s ease;
+}
+
+.userSocialNet{
+  margin-left: 10px;
+ color: #000; 
+ 
+ &:hover{
+   text-decoration: underline;
+ }
+}

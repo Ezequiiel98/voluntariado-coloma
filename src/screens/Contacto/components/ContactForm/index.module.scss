@@ -1,27 +1,15 @@
-@import  '../../assets/scss/_colors.scss';
+@import '../../../../assets/scss/colors.scss';
+@import '../../../../assets/scss/mixins.scss';
 
-.subtitle{
-  margin: auto 30px
-}
-
-.container{
-  display: flex;
+.form{
+  @include flex(null, 'space-between');
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px 30px;  
-  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
 .label{
   display: block;	
   margin-bottom: 15px;
-}
-
-.form{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 30px;
 }
 
 @media  screen and (min-width: 768px){
@@ -50,14 +38,11 @@
   max-width: 100%;
   padding: 10px;
   border-radius: 5px;
-  border: 1.2px solid #949494; 
+  border: 1.2px solid $gray;
   
   &:focus{
     outline: none;
-    /* -webkit-box-shadow: 0px 0px 11px -2px #1A73E8;
-    -moz-box-shadow: 0px 0px 11px -2px #1A73E8;
-    box-shadow: 0px 0px 11px -2px #1A73E8;*/
-    border-color: #1A73E8;
+    border-color: $focusInputColor;  
   }
 }
 
