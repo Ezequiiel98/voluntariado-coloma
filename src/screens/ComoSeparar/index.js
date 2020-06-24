@@ -13,7 +13,14 @@ export default function ComoSeparar() {
      <Header />
      { WASTE_TYPES.map(type => <WasteType key={type.id} {...type} />) }
 
-    <Title Tag="h2" text="¿QUÉ DÍA RECOLECTAN CADA RESIDUO?" />
+     <div className={styles.days}>
+       <Title Tag="h2" text="¿QUÉ DÍA RECOLECTAN CADA RESIDUO?" center />
+       <div className={styles.container}>
+         <Title Tag="h3" text="LUNES, MIERCOLES Y VIERNES: RECICLABLES" backgroundColor="lightblue" className={styles.title} />
+         <Title Tag="h3" text="MARTES Y JUEVES: MIXTOS Y ORGANICOS" backgroundColor="orange" className={styles.title} />
+       </div>
+
+     </div>
    </section>
  );
 }
