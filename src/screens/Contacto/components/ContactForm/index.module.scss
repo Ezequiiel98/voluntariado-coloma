@@ -5,10 +5,10 @@
   @include flex(null, 'space-between');
   flex-wrap: wrap;
   margin-bottom: 30px;
-}
+ }
 
 .label{
-  display: block;	
+  display: block;
   margin-bottom: 15px;
 }
 
@@ -17,11 +17,12 @@
    max-width: 55%;
   }
 }
-
 .containerTextarea,
 .containerInput{
- margin-top: 15px;
+  margin-bottom: 32px;
+  position: relative;
 }
+
 
 .containerTextarea{
   min-width: 100%;
@@ -37,8 +38,8 @@
   min-width: 100%;
   max-width: 100%;
   padding: 10px;
-  border-radius: 5px;
-  border: 1.2px solid $gray;
+  border-radius: 4px;
+  border: 1.3px solid $gray;
   
   &:focus{
     outline: none;
@@ -46,8 +47,18 @@
   }
 }
 
+.inputError{
+  @extend .input;
+  border-color: $error;
+}
+ 
 .textarea{
   height: 200px;
+}
+
+.textareaError{
+  @extend .textarea;
+  border-color: $error; 
 }
 
 @media  screen and (min-width: 480px){
@@ -63,11 +74,9 @@
   background-color: $white;
   height: 45px;
   width: 100%;
-  margin-top: 10px;
   border-radius: 5px; 
   font-size: 18px;
   transition: background-color .5s ease, color .2s ease-in;
-
   &:hover{
    cursor: pointer;
    background-color: $green;

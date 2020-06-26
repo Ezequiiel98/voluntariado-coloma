@@ -1,0 +1,22 @@
+@import '../../../../../../assets/scss/colors.scss';
+
+.error{
+  bottom: -22px;
+  left: 5px;
+  position: absolute;  
+  color: $error;
+  animation-name: showError;
+  animation-duration: .5s;
+}
+
+@keyframes showError{
+  from{
+   opacity: 0;
+   transform: translateY(15px);
+  }
+
+  to{
+   opacity: 1;
+   transform: translateY(0);
+  } 
+}
