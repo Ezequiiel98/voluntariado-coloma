@@ -8,7 +8,7 @@ import { faEnvelope, faCamera } from '@fortawesome/fontawesome-free-solid';
 export const SOCIAL_NETWORKS = [
   {
     key: 0,
-    userName: '@proyectoeconsientes',
+    userName: 'econsientes@gmail.com',
     nameSocial: 'gmail',
     icon: faEnvelope,
     externalPath: 'https://gmail.com'

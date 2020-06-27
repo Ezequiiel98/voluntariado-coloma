@@ -1,5 +1,5 @@
 import React from 'react';
-import {Formik, Form, Field, ErrorMessage} from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import styles from './index.module.scss';
 
 const validate = ({ email }) => {
@@ -31,14 +31,20 @@ export default function NessletterForm() {
       {formik => (
 	<Form className={styles.containerForm}>
 	  <Field name="email">
-	    { ({ field, meta }) => {
-	      const className = meta.touched && meta.error ? styles.inputError : styles.input;
-	      return <input {...field} className={className} type="email" placeholder="dejá@tu.mail" />;
-	      }
-	      }
-	    </Field>
-	    <button type="submit" className={styles.button} disabled={!formik.isValid || formik.isSubmitting}> + ME SUMO</button>
-	 </Form>
+	    { 
+	      ({ field, meta }) => {
+	        const className = meta.touched && meta.error ? styles.inputError : styles.input;
+	        return <input {...field} className={className} type="email" placeholder="dejá@tu.mail" />;
+	     }
+	    }
+	  </Field>
+	  <button 
+	    type="submit" 
+	    className={styles.button} 
+	    disabled={!formik.isValid || formik.isSubmitting}>
+	    + ME SUMO
+	  </button>
+	</Form>
       )} 
     </Formik>  
-  )}
+ )}
