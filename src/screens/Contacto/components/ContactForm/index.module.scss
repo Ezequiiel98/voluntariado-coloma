@@ -19,7 +19,7 @@
 }
 .containerTextarea,
 .containerInput{
-  margin-bottom: 32px;
+  margin-bottom: 15px;
   position: relative;
 }
 
@@ -27,6 +27,7 @@
 .containerTextarea{
   min-width: 100%;
   flex: 1;
+  padding-bottom: 0;
 }
 
 .containerInput{

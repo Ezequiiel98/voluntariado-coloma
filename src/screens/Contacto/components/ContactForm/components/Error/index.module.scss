@@ -1,9 +1,8 @@
 @import '../../../../../../assets/scss/colors.scss';
 
 .error{
-  bottom: -22px;
-  left: 5px;
-  position: absolute;  
+  display: inline-block;
+  padding: 5px 0 0 5px; 
   color: $error;
   animation-name: showError;
   animation-duration: .5s;
