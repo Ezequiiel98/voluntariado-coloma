@@ -42,30 +42,4 @@
   }
 }
 
-.button {
-  border: 1px solid $gray;
-  border-left: none;
-  background-color: $white;
-  font-family: 'Amatic SC', cursive;
-  font-size: 25px;
-  padding: 8px;
-  font-weight: 700;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  
-  &:hover {
-    cursor: pointer;
-    background-color: $green;
-    color: $white;
-  }
 
-  &:focus {
-    outline: none;
-  }
-  
-  transition: color .4s ease-in, background-color .4s ease-out;
-  -webkit-transition: color .4s ease-in, background-color .4s ease-out;
-  -moz-transition: color .4s ease-in, background-color .4s ease-out;
-  -ms-transition: color .4s ease-in, background-color .4s ease-out;
-  -o-transition: color .4s ease-in, background-color .4s ease-out;
-}

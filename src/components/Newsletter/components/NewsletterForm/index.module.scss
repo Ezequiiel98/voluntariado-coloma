@@ -1,0 +1,62 @@
+@import '../../../../assets/scss/colors.scss';
+
+.containerForm {
+  margin: 50px 5px;
+  display: flex;
+}
+
+@media screen and (min-width: 480px) {
+  .containerForm {
+    margin: 50px;
+  }
+}
+
+.input {
+  border: 1px solid $gray;
+  padding: 18px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  outline: none;
+  
+  &:focus {
+    border-color: $focusInputColor;
+  }
+}
+
+.inputError {
+  @extend .input;
+  border-color: $error;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.button {
+  border: 1px solid $gray;
+  border-left: none;
+  background-color: $white;
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+  padding: 8px;
+  font-weight: 700;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  
+  &:hover {
+    cursor: pointer;
+    background-color: $green;
+    color: $white;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  
+  transition: color .4s ease-in, background-color .4s ease-out;
+  -webkit-transition: color .4s ease-in, background-color .4s ease-out;
+  -moz-transition: color .4s ease-in, background-color .4s ease-out;
+  -ms-transition: color .4s ease-in, background-color .4s ease-out;
+  -o-transition: color .4s ease-in, background-color .4s ease-out;
+}
+
