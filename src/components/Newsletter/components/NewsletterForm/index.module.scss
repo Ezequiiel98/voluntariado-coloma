@@ -3,8 +3,10 @@
 .containerForm {
   margin: 50px 5px;
   display: flex;
+  flex-wrap: wrap;
 }
 
+ 
 @media screen and (min-width: 480px) {
   .containerForm {
     margin: 50px;
@@ -48,15 +50,8 @@
     background-color: $green;
     color: $white;
   }
-
-  &:focus {
-    outline: none;
-  }
-  
-  transition: color .4s ease-in, background-color .4s ease-out;
-  -webkit-transition: color .4s ease-in, background-color .4s ease-out;
-  -moz-transition: color .4s ease-in, background-color .4s ease-out;
-  -ms-transition: color .4s ease-in, background-color .4s ease-out;
-  -o-transition: color .4s ease-in, background-color .4s ease-out;
 }
 
+.error{
+  min-width: 100%;
+}

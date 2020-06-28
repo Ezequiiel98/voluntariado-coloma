@@ -1,5 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import Error from 'screens/Contacto/components/ContactForm/components/Error/';
+
 import styles from './index.module.scss';
 
 const validate = ({ email }) => {
@@ -44,7 +46,11 @@ export default function NessletterForm() {
 	    disabled={!formik.isValid || formik.isSubmitting}>
 	    + ME SUMO
 	  </button>
+
+	  <div className={styles.error}>
+	    <ErrorMessage name="email" component={Error} />
+	  </div>
 	</Form>
-      )} 
+      )}
     </Formik>  
  )}
