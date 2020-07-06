@@ -53,6 +53,8 @@
  
   &:disabled:hover{
     cursor: not-allowed; 
+    color: rgba(16, 16, 16, 0.3);
+    background-color: transparent;
   }
 
 }

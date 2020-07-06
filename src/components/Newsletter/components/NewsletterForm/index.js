@@ -43,7 +43,7 @@ export default function NessletterForm() {
 	     </Field>
 	     <button 
 	       type="submit" 
-	       className={!formik.isValid || formik.isSubmitting ? styles.buttonDisabled : styles.button} 
+	       className={styles.button} 
 	       disabled={!formik.isValid || formik.isSubmitting}>
 	       + ME SUMO
 	     </button>
