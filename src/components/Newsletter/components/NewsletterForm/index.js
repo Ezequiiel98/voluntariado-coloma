@@ -32,7 +32,8 @@ export default function NessletterForm() {
     >
       {formik => (
 	<Form className={styles.containerForm}>
-	  <Field name="email">
+	 
+	 <Field name="email">
 	    { 
 	      ({ field, meta }) => {
 	        const className = meta.touched && meta.error ? styles.inputError : styles.input;
@@ -42,7 +43,7 @@ export default function NessletterForm() {
 	  </Field>
 	  <button 
 	    type="submit" 
-	    className={styles.button} 
+	    className={!formik.isValid || formik.isSubmitting ? styles.buttonDisabled : styles.button} 
 	    disabled={!formik.isValid || formik.isSubmitting}>
 	    + ME SUMO
 	  </button>

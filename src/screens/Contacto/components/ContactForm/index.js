@@ -82,7 +82,7 @@ export default function ContactForm() {
 
 		    <ErrorMessage name="message" component={Error} />
 		  </div>
-		  <button className={styles.button} type="submit" disabled={!formik.isValid || formik.isSubmitting}>Enviar</button>
+	    <button className={styles.button} type="submit" disabled={!formik.isValid || formik.isSubmitting}>Enviar</button>
 		</Form>
 	  )
       }}

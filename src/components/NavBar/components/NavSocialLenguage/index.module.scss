@@ -3,7 +3,7 @@
 
 .containerNav {
   @include flex-j-center-a-center;
-  padding: 0 20px;
+  padding-right: 100px;
   margin-bottom: 0;
   max-height: 40px;
   border-bottom: 2px solid $white;
@@ -15,7 +15,7 @@
   }
 }
 
-.containerLenguages {
+/*.containerLenguages {
   margin-left: 40px;
 }
 
@@ -53,4 +53,4 @@
     border: none;
     outline: none;
   }
-}
+}*/

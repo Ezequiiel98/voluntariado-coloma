@@ -19,7 +19,7 @@
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   outline: none;
-  
+  max-width: 50%;  
   &:focus {
     border-color: $focusInputColor;
   }
@@ -50,8 +50,13 @@
     background-color: $green;
     color: $white;
   }
+ 
+  &:disabled:hover{
+    cursor: not-allowed; 
+  }
+
 }
 
-.error{
+ .error{
   min-width: 100%;
 }

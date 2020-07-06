@@ -9,7 +9,7 @@ export default function SocialNetworks() {
     <div className={styles.containerSocialNet}>
 
       {SOCIAL_NETWORKS.map(socialNet => (
-        <div key={socialNet.id} className={styles.socialNet}>
+        <div key={socialNet.key} className={styles.socialNet}>
           <a href={socialNet.externalPath} target="blank" className={styles[socialNet.nameSocial]}>
             <FontAwesomeIcon icon={socialNet.icon} className={styles.icon} />
           </a>
