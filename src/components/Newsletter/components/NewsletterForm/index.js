@@ -31,23 +31,25 @@ export default function NessletterForm() {
       validateOnMount
     >
       {formik => (
-	<Form className={styles.containerForm}>
-	 
-	 <Field name="email">
-	    { 
-	      ({ field, meta }) => {
-	        const className = meta.touched && meta.error ? styles.inputError : styles.input;
-	        return <input {...field} className={className} type="email" placeholder="dejá@tu.mail" />;
-	     }
-	    }
-	  </Field>
-	  <button 
-	    type="submit" 
-	    className={!formik.isValid || formik.isSubmitting ? styles.buttonDisabled : styles.button} 
-	    disabled={!formik.isValid || formik.isSubmitting}>
-	    + ME SUMO
-	  </button>
-
+	<Form >
+	  <div className={styles.containerForm}>
+	    <Field name="email">
+	       { 
+	         ({ field, meta }) => {
+	           const className = meta.touched && meta.error ? styles.inputError : styles.input;
+	           return <input {...field} className={className} type="email" placeholder="dejá@tu.mail" />;
+	        }
+	       }
+	     </Field>
+	     <button 
+	       type="submit" 
+	       className={!formik.isValid || formik.isSubmitting ? styles.buttonDisabled : styles.button} 
+	       disabled={!formik.isValid || formik.isSubmitting}>
+	       + ME SUMO
+	     </button>
+               
+	  
+	  </div> 
 	  <div className={styles.error}>
 	    <ErrorMessage name="email" component={Error} />
 	  </div>

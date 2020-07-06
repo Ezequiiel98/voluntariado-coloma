@@ -1,11 +1,9 @@
 @import '../../../../assets/scss/colors.scss';
 
 .containerForm {
-  margin: 50px 5px;
+  margin: 50px 5px 5px 5px;
   display: flex;
-  flex-wrap: wrap;
 }
-
  
 @media screen and (min-width: 480px) {
   .containerForm {
@@ -19,7 +17,8 @@
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   outline: none;
-  max-width: 50%;  
+  max-width: 80%;
+
   &:focus {
     border-color: $focusInputColor;
   }
@@ -44,7 +43,8 @@
   font-weight: 700;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  
+  max-width: 20%; 
+ 
   &:hover {
     cursor: pointer;
     background-color: $green;
