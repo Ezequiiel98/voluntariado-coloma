@@ -1,5 +1,6 @@
 .wasteType {
   padding: 20px 25px;
+  max-width: 100%;
 }
 
 @media screen and  (min-width:768px){
@@ -12,6 +13,7 @@
   margin-bottom: 0;
   padding: 5px;
   width: 300px;
+  max-width: 100%;
   margin: 0 auto;
   border-radius: 7px;
   -webkit-border-radius: 7px;
@@ -26,6 +28,7 @@
   padding: 0;
   font-size: 24px;
   width: 200px;
+  max-width: 100%;
   margin: 0 auto;
   clip-path: polygon(63% 0, 85% 0, 100% 0, 100% 100%, 81% 91%, 54% 87%, 27% 93%, 0 100%, 0 0, 23% 0);
   transform: translateY(-8px);
@@ -38,7 +41,16 @@
 .paragraph{
   font-family: 'Amatic SC', cursive;
   font-size: 35px;
+  text-align: center;
 }
+
+@media screen and (min-width:480px){
+  .paragraph{
+    text-align: left;
+  }
+
+}
+
 
 .bold{
   text-decoration: underline;
