@@ -7,11 +7,9 @@ import './index.scss';
 import App from './components/App';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Router>
-      <ScrollTop />
-      <App />
-    </Router>
-  </React.StrictMode>,
+  <Router>
+    <ScrollTop />
+    <App />
+  </Router>,
   document.getElementById('root')
 );

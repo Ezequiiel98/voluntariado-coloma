@@ -3,8 +3,6 @@ import React, { useEffect, useState } from 'react';
 import NavBar from '../NavBar';
 import Main from '../Main';
 
-import styles from './index.module.scss';
-
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -14,7 +12,7 @@ function App() {
       loader.parentNode.removeChild(loader);
       setIsLoaded(true);
     };
-
+  
     wasLoaded();
   }, []);
 
