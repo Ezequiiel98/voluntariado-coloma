@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Error from 'screens/Contacto/components/ContactForm/components/Error/';
-
+import { addNewSuscbriberMc } from 'services/newsletter.service';
 import styles from './index.module.scss';
 
 const validate = ({ email }) => {
@@ -17,8 +17,9 @@ const validate = ({ email }) => {
   return errors;
 }
 
-const onSubmit = (values, onSubmitProps) => {
-  console.log(values);
+const onSubmit = async (values, onSubmitProps) => {
+  const res = addNewSuscbriberMc(values);
+  console.log(res);
   onSubmitProps.setSubmitting(false);
 }
 
