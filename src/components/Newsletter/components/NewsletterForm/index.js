@@ -17,13 +17,20 @@ const validate = ({ email }) => {
   return errors;
 }
 
+
+export default function NewsletterForm({ onSentFormSuccessfully }) {
+
 const onSubmit = async (values, onSubmitProps) => {
-  const res = addNewSuscbriberMc(values);
+  const res = await addNewSuscbriberMc(values);
   console.log(res);
   onSubmitProps.setSubmitting(false);
+  
+  if(res.status === 200){
+    return onSentFormSuccessfully(true);
+  }
+  return onSubmitProps.setFieldError('email', 'Hubo un problema, vuelva a intentarlo');
 }
 
-export default function NessletterForm() {
   return(
     <Formik
       initialValues={ {email: ''} }
@@ -32,29 +39,31 @@ export default function NessletterForm() {
       validateOnMount
     >
       {formik => (
-	<Form >
-	  <div className={styles.containerForm}>
-	    <Field name="email">
-	       { 
-	         ({ field, meta }) => {
-	           const className = meta.touched && meta.error ? styles.inputError : styles.input;
-	           return <input {...field} className={className} type="email" placeholder="dejá@tu.mail" />;
-	        }
-	       }
-	     </Field>
-	     <button 
-	       type="submit" 
-	       className={styles.button} 
-	       disabled={!formik.isValid || formik.isSubmitting}>
-	       + ME SUMO
-	     </button>
-               
-	  
-	  </div> 
-	  <div className={styles.error}>
-	    <ErrorMessage name="email" component={Error} />
-	  </div>
-	</Form>
+	formik.isSubmitting 
+	  ? <p>awarde</p> 
+	  : <Form >
+	      <div className={styles.containerForm}>
+	         <Field name="email">
+	            { 
+	              ({ field, meta }) => {
+	                const className = meta.touched && meta.error ? styles.inputError : styles.input;
+	                return <input {...field} className={className} type="email" placeholder="dejá@tu.mail" />;
+	             }
+	            }
+	          </Field>
+	          <button 
+	            type="submit" 
+	            className={styles.button} 
+	            disabled={!formik.isValid || formik.isSubmitting}>
+	            + ME SUMO
+	          </button>
+                    
+	       
+	       </div> 
+	       <div className={styles.error}>
+	         <ErrorMessage name="email" component={Error} />
+	       </div>
+	    </Form>
       )}
     </Formik>  
  )}
