@@ -22,7 +22,6 @@ export default function NewsletterForm({ onSentFormSuccessfully }) {
 
 const onSubmit = async (values, onSubmitProps) => {
   const res = await addNewSuscbriberMc(values);
-  console.log(res);
   onSubmitProps.setSubmitting(false);
   
   if(res.status === 200){
@@ -51,7 +50,7 @@ const onSubmit = async (values, onSubmitProps) => {
 	             }
 	            }
 	          </Field>
-	          <button 
+          <button 
 	            type="submit" 
 	            className={styles.button} 
 	            disabled={!formik.isValid || formik.isSubmitting}>
