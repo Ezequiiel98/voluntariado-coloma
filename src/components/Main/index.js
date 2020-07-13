@@ -1,7 +1,8 @@
 import React, { Suspense, lazy } from 'react';
 import { Route, Switch, Redirect } from 'react-router';
+import Loader from 'components/Loader';
 
-import Home from 'screens/Home';
+const Home = lazy(() => import('screens/Home'));
 const ComoSeparar = lazy(() => import('screens/ComoSeparar'));
 const DondeLlevar = lazy(() => import('screens/DondeLlevar'));
 const Sponsors = lazy(() => import('screens/Sponsors'));
@@ -10,7 +11,7 @@ const Contacto = lazy(() => import('screens/Contacto'));
 export default function Main() {
   return (
     <main>
-      <Suspense fallback={<div>Cargando...</div>}>
+      <Suspense fallback={<Loader />}>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/como-separar" component={ComoSeparar} />

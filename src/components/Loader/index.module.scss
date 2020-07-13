@@ -1,0 +1,45 @@
+@import '../../assets/scss/_colors.scss';
+
+.loader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}  
+
+
+.circle{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 6px solid $gray;
+  border-top: 6px solid  $darkGreen;
+  animation-name: loading;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  margin: 0 auto;
+} 
+
+@keyframes loading{
+  0%{
+    transform: rotate(0deg);
+  }
+  
+  30%{
+    transform: rotate(50deg);
+  }
+  
+  60%{
+    transform: rotate(120deg);
+  }
+  
+  100%{
+    transform: rotate(360deg);
+  }
+
+}

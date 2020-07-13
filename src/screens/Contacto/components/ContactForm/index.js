@@ -1,12 +1,14 @@
 import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
-import Error from './components/Error';
+
+import Loader from 'components/Loader';
 import { sendFromContactMail } from 'services/contact.service';
 
+import Error from './components/Error';
 import styles from './index.module.scss';
 
 const initialValues = { name: '', email: '', message: '' };
-
+//eslint-disable-next-line no-debugger
 const validate = ({ name, email, message }) => {
   const errors = {};
   const expRegEmail = /(^[0-9a-zA-Z]+[-._+&])*[0-9a-zA-Z]+@([-0-9a-zA-Z]+[.])+[a-zA-Z]{2,6}$/;
@@ -18,7 +20,7 @@ const validate = ({ name, email, message }) => {
   if (!email) {
     errors.email = 'Este campo es obligatorio';
   }else if (!expRegEmail.test(email)){
-    errors.email = 'El correo electrónico es invalido';
+    errors.email = 'El correo electrónico es inválido';
   }
 
   if (!message) {
@@ -31,9 +33,10 @@ const validate = ({ name, email, message }) => {
 const sendForm = async (values, onSubmitProps) => {
   const res  = await sendFromContactMail(values);
   console.log(res.status, res);
+  onSubmitProps.setSubmitting(false);
 }
-const onSubmit =  (values, onSubmitProps)  => sendForm(values, onSubmitProps);
 
+const onSubmit =  (values, onSubmitProps)  => sendForm(values, onSubmitProps);
 export default function ContactForm() {
   return (
     <Formik
@@ -43,7 +46,10 @@ export default function ContactForm() {
       validateOnMount
     >
       {formik => (formik.isSubmitting
-	? <p className={styles.form}> awardenos :c </p>  
+	? <div className={styles.containerLoader}> 
+	    <Loader />
+	  </div>
+	
 	: <Form className={styles.form}>
            <div className={styles.containerInput}>
              <label className={styles.label} htmlFor="name"> Nombre: </label>
