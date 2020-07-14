@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 
+import SuccessMessage from 'components/Title';
 import Loader from 'components/Loader';
 import { sendFromContactMail } from 'services/contact.service';
 
@@ -8,36 +9,47 @@ import Error from './components/Error';
 import styles from './index.module.scss';
 
 const initialValues = { name: '', email: '', message: '' };
-//eslint-disable-next-line no-debugger
+
 const validate = ({ name, email, message }) => {
   const errors = {};
   const expRegEmail = /(^[0-9a-zA-Z]+[-._+&])*[0-9a-zA-Z]+@([-0-9a-zA-Z]+[.])+[a-zA-Z]{2,6}$/;
 
   if (!name) {
-    errors.name = 'Este campo es obligatorio';
+    errors.name = 'Este campo es obligatorio.';
+  }else if(name.length < 3 || name.length > 30){
+    errors.name = 'El nombre debe tener entre 3 y 30 caracteres.';
   }
 
   if (!email) {
-    errors.email = 'Este campo es obligatorio';
+    errors.email = 'Este campo es obligatorio.';
   }else if (!expRegEmail.test(email)){
-    errors.email = 'El correo electrónico es inválido';
+    errors.email = 'El correo electrónico es inválido.';
   }
 
   if (!message) {
-    errors.message = 'Este campo obligatorio';
+    errors.message = 'Este campo obligatorio.';
+  }else if(message.length < 10){
+    errors.message = 'La consulta debe tener más de 10 caracteres.';
   }
 
   return errors;
 };
 
-const sendForm = async (values, onSubmitProps) => {
-  const res  = await sendFromContactMail(values);
-  console.log(res.status, res);
-  onSubmitProps.setSubmitting(false);
-}
-
-const onSubmit =  (values, onSubmitProps)  => sendForm(values, onSubmitProps);
 export default function ContactForm() {
+  const [formSentSucessfully, setFormSentSuccessfully] = useState(false);
+
+  const sendForm = async (values, onSubmitProps) => {
+    const res  = await sendFromContactMail(values);
+    onSubmitProps.setSubmitting(false);
+    
+    if(res.status === 200){
+      return setFormSentSuccessfully(true);      
+    } 
+    
+    return onSubmitProps.setFieldError('message', 'Hubo un problema, vuelva a intentarlo');
+  }
+
+  const onSubmit =  (values, onSubmitProps)  => sendForm(values, onSubmitProps);
   return (
     <Formik
       initialValues={initialValues}
@@ -45,11 +57,18 @@ export default function ContactForm() {
       onSubmit={onSubmit}
       validateOnMount
     >
-      {formik => (formik.isSubmitting
+      {formik => (formik.isSubmitting || formSentSucessfully
 	? <div className={styles.containerLoader}> 
-	    <Loader />
+	  { formSentSucessfully 
+	      ? <SuccessMessage 
+	          center
+	          Tag="h3"
+	          text="Consulta enviada con éxito" 
+	          className={styles.successMessage}
+	        /> 
+	      : <Loader /> 
+	  }
 	  </div>
-	
 	: <Form className={styles.form}>
            <div className={styles.containerInput}>
              <label className={styles.label} htmlFor="name"> Nombre: </label>
