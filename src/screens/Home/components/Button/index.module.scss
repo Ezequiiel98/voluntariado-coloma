@@ -4,8 +4,8 @@
   color: $green;
   padding: 10px;
   padding: 10px 20px;
-  max-width: 120px;
-  min-width: 120px;
+  max-width: 110px;
+  min-width: 110px;
   min-height: 74px;
   border: 3px solid $green;
   border-radius: 15px;
@@ -28,9 +28,7 @@
     background-color: $green;
     color: $white;
   }
-
 }
-
 
 .link {
   transition: color .5s ease, ;
@@ -38,7 +36,7 @@
   -moz-transition: color .5s ease, ;
   -ms-transition: color .5s ease, ;
   -o-transition: color .5s ease, ;
-  margin: 10px;
+  margin: 8px;
 }
 
 @media screen and (min-width: 350px){
@@ -53,4 +51,4 @@
     margin: 20px 0 0 0;
   }
 }
-/* $yellow: #fef67f, $green: #aedd94, orange: #ff8351, lightblue:  #91E4FB */
+
