@@ -6,11 +6,12 @@ import styles from './index.module.scss';
 
 export default function Button({ text, path }) {
   return (
-    <button className={styles.button} type="button">
       <Link to={path} className={styles.link}>
+    <button className={styles.button} type="button">
         {text}
-      </Link>
+
     </button>
+      </Link>
   );
 }
 

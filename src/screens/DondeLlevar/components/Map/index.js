@@ -12,9 +12,8 @@ import TypeMarker from './components/TypeMarker';
 import { MARKERS } from './constants/markers';
 
 export default function Map() {
-  const { latitud } = MARKERS[0];
-  const { longitud } = MARKERS[0];
-  const position = [latitud, longitud];
+  const { latitude, longitude } = MARKERS[8];
+  const position = [latitude, longitude];
 
   const markerIcon = (color = 'markerIcon') => L.divIcon({
       html: ReactDOMServer.renderToString(<FontAwesomeIcon icon={faMapMarkerAlt} className={styles[color]} />),
@@ -24,7 +23,7 @@ export default function Map() {
 
   return (
     <div className={styles.map}>
-      <MapContainer className={styles.map} center={position} zoom={12} scrollWheelZoom={false}>
+      <MapContainer className={styles.map} center={position} zoom={14.49} scrollWheelZoom={false}>
         <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -35,7 +34,7 @@ export default function Map() {
         <TypeMarker type="Puntos verdes" color="green" position="topleft" />
         <TypeMarker type="Planta de reciclaje" color="lightblue" position="topleft" />
 
-        {MARKERS.map(marker => <Marker key={marker.id} position={[marker.latitud, marker.longitud]} icon={markerIcon(marker.color)} />)}
+        {MARKERS.map(({id, latitude, longitude, color}) => <Marker key={id} position={[latitude, longitude]} icon={markerIcon(color)} />)}
 
       </MapContainer>
     </div>

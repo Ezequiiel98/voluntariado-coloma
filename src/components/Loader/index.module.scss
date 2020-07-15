@@ -16,13 +16,13 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 6px solid $gray;
-  border-top: 6px solid  $darkGreen;
+  border: 6px solid $darkGreen;
+  border-top: 6px solid  $gray;
   animation-name: loading;
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  margin: 0 auto;
+  margin: 0 auto; 
 } 
 
 @keyframes loading{

@@ -1,12 +1,12 @@
 @import '../../../../assets/scss/colors';
 
 .button {
+  color: $green;
   padding: 10px;
   padding: 10px 20px;
   max-width: 120px;
   min-width: 120px;
-  min-height: 50px;
-  margin-top: 20px;
+  min-height: 74px;
   border: 3px solid $green;
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -21,18 +21,24 @@
   -moz-transition: color .5s ease, background-color .5s ease;
   -ms-transition: color .5s ease, background-color .5s ease;
   -o-transition: color .5s ease, background-color .5s ease;
-  touch-action: none;
-  
+  outline: none;
+
   &:hover {
     cursor: pointer;
     background-color: $green;
-  }
-  
-  &:hover .link {
-    cursor: pointer;
     color: $white;
   }
 
+}
+
+
+.link {
+  transition: color .5s ease, ;
+  -webkit-transition: color .5s ease, ;
+  -moz-transition: color .5s ease, ;
+  -ms-transition: color .5s ease, ;
+  -o-transition: color .5s ease, ;
+  margin: 10px;
 }
 
 @media screen and (min-width: 350px){
@@ -40,16 +46,11 @@
     padding: 10px 20px;
     max-width: 150px;
     min-width: 150px;
+    min-height: 60px;
+  }
+
+  .link{
+    margin: 20px 0 0 0;
   }
 }
-
-.link {
-  color: $green;
-  transition: color .5s ease, ;
-  -webkit-transition: color .5s ease, ;
-  -moz-transition: color .5s ease, ;
-  -ms-transition: color .5s ease, ;
-  -o-transition: color .5s ease, ;
-}
-
 /* $yellow: #fef67f, $green: #aedd94, orange: #ff8351, lightblue:  #91E4FB */
