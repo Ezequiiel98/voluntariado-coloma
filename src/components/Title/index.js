@@ -3,8 +3,15 @@ import PropTypes from 'prop-types';
 
 import styles from './index.module.scss';
 
-export default function Title({ Tag, text, center, color, backgroundColor, className }) {
-  return <Tag className={`${className && className} ${center && styles.center} ${color && styles[color.toLowerCase()]} ${backgroundColor && styles[backgroundColor.toLowerCase()]}`}>{text}</Tag>;
+export default function Title({ Tag = 'h1', text, center, color, backgroundColor, className }) {
+  let myStyles = [`${className}`,
+    `${center && styles.center}`,
+    `${styles[color?.toLowerCase()]}`, 
+    `${styles[backgroundColor?.toLowerCase()]}`];
+ 
+  myStyles = myStyles.filter(style => style !== 'undefined').join(' ');
+  
+  return <Tag className={myStyles}>{text} </Tag>
 }
 
 Title.propTypes = {

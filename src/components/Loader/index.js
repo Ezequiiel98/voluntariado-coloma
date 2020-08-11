@@ -4,8 +4,10 @@ import styles from './index.module.scss';
 
 export default function Loader() {
   return(
-    <div className={styles.loader} >
-      <div className={styles.circle} />
+    <div className={styles.containerLoader}>
+      <div className={styles.loader} >
+        <div className={styles.circle} />
+      </div>
     </div>
   );
 }

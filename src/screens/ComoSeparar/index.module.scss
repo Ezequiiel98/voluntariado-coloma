@@ -1,16 +1,32 @@
 .days{
- padding: 0 20px 20px 25px;
+  padding: 0 20px 20px 25px;
 }
 
 .title{
-padding: 10px 5px;
+  padding: 5px 12px;
 }
 
-.container{
+.containerWastes{
  display: flex;
- align-items: center;
- justify-content: space-between;
- flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
+@media screen and (min-width: 768px){
+  .waste{
+    max-width: 45%;
+  }
+  
+  .containerWastes{ 
+    text-align: center;
+  }
+}
 
+.containerImg{
+  max-width: 100%;
+  
+  & > img{
+    max-width: 100%;
+  }
+}

@@ -44,7 +44,7 @@ export const NAV_SOCIAL = [
     key: 6,
     nameSocial: 'instagram',
     icon: faInstagram,
-    externalPath: 'https://instagram.com'
+    externalPath: 'https://instagram.com/proyectoeconscientes'
   },
   {
     key: 7,

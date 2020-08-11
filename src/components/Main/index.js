@@ -1,7 +1,8 @@
 import React, { Suspense, lazy } from 'react';
 import { Route, Switch, Redirect } from 'react-router';
 import Loader from 'components/Loader';
-
+import styles from './index.module.scss';
+ 
 const Home = lazy(() => import('screens/Home'));
 const ComoSeparar = lazy(() => import('screens/ComoSeparar'));
 const DondeLlevar = lazy(() => import('screens/DondeLlevar'));
@@ -10,7 +11,7 @@ const Contacto = lazy(() => import('screens/Contacto'));
 
 export default function Main() {
   return (
-    <main>
+    <main className={styles.main}>
       <Suspense fallback={<Loader />}>
         <Switch>
           <Route exact path="/" component={Home} />
